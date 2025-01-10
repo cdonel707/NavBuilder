@@ -1,0 +1,9 @@
+groups:
+  python-sdk:
+    generators:
+      - name: fernapi/fern-python-sdk
+        version: 0.8.1  # Use latest version
+        output:
+          location: pypi
+          package-name: "your-package-name"
+          token: ${PYPI_TOKEN}  # References the GitHub secret 
