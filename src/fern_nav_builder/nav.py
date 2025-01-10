@@ -1,4 +1,5 @@
 import os
+import sys
 import yaml
 from pathlib import Path
 
@@ -74,12 +75,13 @@ def create_docs_yml(folder_path):
 
     print(f"docs.yml has been created at {output_path}")
 
-# Example usage
-if __name__ == "__main__":
-    import sys
+def main():
     if len(sys.argv) != 2:
-        print("Usage: python script.py <folder_path>")
+        print("Usage: fern-nav <folder_path>")
         sys.exit(1)
     
     folder_path = sys.argv[1]
     create_docs_yml(folder_path)
+
+if __name__ == "__main__":
+    main()
